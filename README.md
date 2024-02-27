@@ -7,8 +7,8 @@ This is a Node.JS project
 
 ## Status
 - [x] First design and testing version for the api
-- [ ] REST Api implemented
-- [ ] Postman runner passed
+- [x] REST Api implemented(partially)
+- [x] Postman runner passed
 - [ ] Frontend implemented
 - [ ] Wrap on docker
 
