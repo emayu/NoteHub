@@ -5,8 +5,10 @@ const router = express.Router();
 
 
 
-router.get('/notes-api/v1/note', notesController.list);
-router.post('/notes-api/v1/note', notesController.create)
-router.delete('/notes-api/v1/note/:id', notesController.delete);
+router.get('/notes', notesController.list);
+router.get('/notes/:id', notesController.getById);
+router.post('/notes', notesController.create)
+router.delete('/notes/:id', notesController.delete);
+router.put('/notes', notesController.update)
 
 export default router;

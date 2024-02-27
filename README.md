@@ -21,7 +21,7 @@ The API design and testing for Notes API is located in [postman/notes_project.po
 ### Resources 
 The principal resource is the notes
 
-- GET http://localhost:3000/notes-api/v1/note 
+- GET http://localhost:3000/notes-api/v1/notes 
 
 
 ### To Run test
