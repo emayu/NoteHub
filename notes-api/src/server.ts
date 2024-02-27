@@ -1,17 +1,21 @@
-import  express, {Express} from 'express';
+import  express, {Express, urlencoded} from 'express';
 import routes from './routes';
 import morgan from 'morgan';
+import cors from 'cors';
 
 
 const app:Express = express();
 const PORT = process.env.PORT || 3000;
-app.use(express.json());
+
 app.use(
     morgan(
       '{"level":"info","message":":method :url :status",' +
         '"metadata":{"timestamp":":date","content-length":":res[content-length]","response-time":":response-time ms"}',
     ),
-  )
+  ).use(urlencoded({ extended: true }))
+  .use(cors());
+  app.use(express.json());
+  
 app.use('/notes-api/v1', routes);
 
 //monitoring and health

@@ -1,0 +1,17 @@
+<p>notes works!</p>
+
+<section>
+    <notes-create />
+</section>
+<section>
+    <h3>Listado de Notas</h3>
+    <li *ngFor="let note of notesList" class="note">
+        <b>{{note.title}}</b>
+        <p>{{note.note}}</p>
+        <div style="float: right;">
+            <!-- <button class="btn btn-secondary btn-sm" style="margin: 1px;" >Editar</button> -->
+            <button class="btn btn-danger btn-sm" (click)="deleteNote(note.id)"  >Eliminar</button>
+        </div>
+    </li>
+</section>
+
