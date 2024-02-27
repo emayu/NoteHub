@@ -40,4 +40,8 @@ export class NotesComponent  implements OnInit{
     }
   }
 
+  performUpdateList(){
+    this.getAllNotes();
+  }
+
 }

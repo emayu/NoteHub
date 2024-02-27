@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Note } from '@data/model/Note';
 import { NotesService } from '@data/services/notes.service';
 
@@ -9,7 +9,9 @@ import { NotesService } from '@data/services/notes.service';
 })
 export class NotesCreateComponent {
 
- constructor(private notesService:NotesService){}
+@Output('onCreateNote') onCreateNote = new EventEmitter();
+
+constructor(private notesService:NotesService){}
 
 note:Note = {
   id: null,
@@ -27,6 +29,7 @@ create(){
   .subscribe({
     next: noteCreated =>{
       console.log('created', noteCreated);
+      this.onCreateNote.emit();
       this.note = {
         id: null,
         title: "",
