@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NotesCreateComponent } from './notes-create.component';
+import { NotesCreateComponent } from './notes-view.component';
 
 describe('NotesCreateComponent', () => {
   let component: NotesCreateComponent;

@@ -6,8 +6,9 @@ import { AppComponent } from './app.component';
 import { NotesService } from '@data/services/notes.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NotesComponent } from '@modules/notes/notes.component';
-import { NotesCreateComponent } from '@modules/notes/views/notes-create/notes-create.component';
+import { NotesCreateComponent } from '@modules/notes/views/notes-view/notes-view.component';
 import { FormsModule } from '@angular/forms';
+import { NgbDropdownModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,9 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgbModule,
+    NgbDropdownModule
     
   ],
   providers: [NotesService, HttpClient],

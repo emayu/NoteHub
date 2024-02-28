@@ -9,7 +9,7 @@ This is a Node.JS project
 - [x] First design and testing version for the api
 - [x] REST Api implemented(partially)
 - [x] Postman runner passed
-- [ ] Frontend implemented
+- [x] Frontend implemented
 - [ ] Wrap on docker
 
 
