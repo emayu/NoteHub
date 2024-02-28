@@ -7,10 +7,28 @@ This is a Node.JS project
 
 ## Status
 - [x] First design and testing version for the api
-- [ ] REST Api implemented
-- [ ] Postman runner passed
-- [ ] Frontend implemented
+- [x] REST Api implemented(partially)
+- [x] Postman runner passed
+- [x] Frontend implemented
 - [ ] Wrap on docker
+
+
+## Run this project
+Run runnig this project
+1. Clone this Git repository
+2. move to backend project `cd notes-api`
+3. install the dependecies `npm install`
+4. move to root `cd ..`
+5. move to frontend project `cd notes-ui`
+6. install the dependecies `npm install`
+7. move to root again `cd ..`
+8. then in the root folder run projects `npm run dev`
+9. go to `http:localhost:4200`
+
+
+### Version used for develop
+NodeJS v18.19.0
+
 
 
 ## RESTful API and Testing

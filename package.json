@@ -1,0 +1,11 @@
+{
+  "name": "notehub",
+  "version": "1.0.0",
+  "description": "The primary purpose of the application is creating and managing notes.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cd notes-api && start npm run dev&& cd ../notes-ui && start npm run start"
+  },
+  "author": "",
+  "license": "ISC"
+}

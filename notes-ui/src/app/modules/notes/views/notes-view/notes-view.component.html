@@ -1,0 +1,19 @@
+
+<div>
+    <form>
+        <div class="mb-3">
+            <label for="title" class="form-label">Título</label>
+            <input id="title" type="text" placeholder="Título" class="form-control" [(ngModel)]="note.title"  [ngModelOptions]="{standalone: true}"  required/>
+        </div>
+        <div class="mb-3">
+            <label for="note" class="form-label">Note</label>
+            <textarea id="note" class="form-control" [(ngModel)]="note.note" [ngModelOptions]="{standalone: true}" required ></textarea>
+        </div>
+
+        <div> 
+            <button type="button"  (click)="launchAction()" class="btn btn-primary" >{{textAction}}</button>
+            <button *ngIf="textAction == 'Editar'" (click)="cancelAction()" type="button" class="btn btn-secondary">Cancelar</button>
+        </div>
+
+    </form>
+</div>

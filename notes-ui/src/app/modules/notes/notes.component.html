@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-4">
+        <div *ngIf="noteToEdit == null">
+            <h2>Crear nota nueva</h2>
+            <section style="border: 1px solid; border-radius: 10px;">
+                <notes-view (onClickAction)="performCreate($event)" />
+            </section>
+        </div>
+        <div *ngIf="noteToEdit != null">
+            <h2>Editar nota</h2>
+            <section style="border: 1px solid; border-radius: 10px;">
+                <notes-view (onClickAction)="performUpdate($event)" (onClickCancel)="cancelUpdate()" textAction="Editar" [note]="noteToEdit" />
+            </section>
+        </div>
+    </div>
+    <div class="col-8">
+        <h3>Listado de Notas</h3>
+        <section>
+            <div *ngFor="let note of notesList" class="note">
+                <b>{{note.title}}</b>
+                <p>{{note.note}}</p>
+                <sub >{{note.lastUpdate}}</sub>
+                <div style="float: right;">
+                    <button class="btn btn-secondary btn-sm" style="margin: 1px;"  (click)="seletecToUpdate(note)">Editar</button>
+                    <button class="btn btn-danger btn-sm" (click)="deleteNote(note.id)">Eliminar</button>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
