@@ -13,6 +13,24 @@ This is a Node.JS project
 - [ ] Wrap on docker
 
 
+## Run this project
+Run runnig this project
+1. Clone this Git repository
+2. move to backend project `cd notes-api`
+3. install the dependecies `npm install`
+4. move to root `cd ..`
+5. move to frontend project `cd notes-ui`
+6. install the dependecies `npm install`
+7. move to root again `cd ..`
+8. then in the root folder run projects `npm run dev`
+9. go to `http:localhost:4200`
+
+
+### Version used for develop
+NodeJS v18.19.0
+
+
+
 ## RESTful API and Testing
 
 The API design and testing for Notes API is located in [postman/notes_project.postman_collection.json](https://github.com/emayu/NoteHub/web/blob/master/postman/notes_project.postman_collection.json), in the collection project you can view some examples and use it to perform testing to the api
